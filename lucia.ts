@@ -1,6 +1,7 @@
 import { DenoKVAdapter } from "lucia-auth-adapter-deno-kv";
 import { Lucia } from "npm:lucia";
 import { db } from "./db.ts";
+import { dev } from "./environment.ts";
 
 export const lucia = new Lucia(new DenoKVAdapter(db), {
   getUserAttributes: (attributes) => {
@@ -12,7 +13,7 @@ export const lucia = new Lucia(new DenoKVAdapter(db), {
   },
   sessionCookie: {
     attributes: {
-      secure: false,
+      secure: !dev,
     },
   },
 });

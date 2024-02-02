@@ -2,6 +2,7 @@ import { getCookie, setCookie } from "hono/helper.ts";
 import { generateState, OAuth2RequestError } from "npm:arctic";
 import { DatabaseUser } from "npm:lucia";
 import { db } from "./db.ts";
+import { dev } from "./environment.ts";
 import { github } from "./github.ts";
 import { hono } from "./hono.ts";
 import { lucia } from "./lucia.ts";
@@ -14,7 +15,7 @@ app.get("/github", async (c) => {
 
   setCookie(c, "github_oauth_state", state, {
     path: "/",
-    secure: false,
+    secure: !dev,
     httpOnly: true,
     maxAge: 60 * 10,
     sameSite: "Lax",
@@ -48,7 +49,6 @@ app.get("/github/callback", async (c) => {
       setCookie(c, sessionCookie.name, sessionCookie.value, {
         path: ".",
         ...sessionCookie.attributes,
-        secure: false,
         sameSite: "Lax",
       });
     } else {
@@ -72,7 +72,6 @@ app.get("/github/callback", async (c) => {
       setCookie(c, sessionCookie.name, sessionCookie.value, {
         path: ".",
         ...sessionCookie.attributes,
-        secure: false,
         sameSite: "Lax",
       });
     }

@@ -19,23 +19,31 @@ app.get("/", (c) => {
         >
         </link>
       </head>
-      <body style="height: 100vh;display: flex;justify-content: center; align-items: center;">
+      <body
+        class="container"
+        style="height: 100vh; display: flex; justify-content: center; align-items: center;"
+      >
         {c.var.user
           ? (
-            <div style="text-align: center;">
+            <article style="text-align: center; width: 100%; max-width: 600px;">
               <h1>hello {c.var.user.username} 👋</h1>
               <form action="/logout" method="post" style="margin: 0;">
                 <button class="contrast">sign out</button>
               </form>
-            </div>
+            </article>
           )
           : (
-            <div style="text-align: center;">
+            <article style="text-align: center; width: 100%; max-width: 600px;">
               <h1>sign in</h1>
-              <a href="/login/github" role="button" class="contrast">
+              <a
+                href="/login/github"
+                role="button"
+                class="contrast"
+                style="width: 100%; display: block;"
+              >
                 sign in with github
               </a>
-            </div>
+            </article>
           )}
       </body>
     </html>,
