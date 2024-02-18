@@ -2,8 +2,19 @@
   "version": "3",
   "packages": {
     "specifiers": {
+      "jsr:@cotyhamilton/lucia-adapter-denokv@0": "jsr:@cotyhamilton/lucia-adapter-denokv@0.1.0",
+      "jsr:@cotyhamilton/lucia-adapter-denokv@1.0.0-next.0": "jsr:@cotyhamilton/lucia-adapter-denokv@1.0.0-next.0",
       "npm:arctic@1.1.0": "npm:arctic@1.1.0",
+      "npm:lucia@3": "npm:lucia@3.0.1",
       "npm:lucia@3.0.1": "npm:lucia@3.0.1"
+    },
+    "jsr": {
+      "@cotyhamilton/lucia-adapter-denokv@0.1.0": {
+        "dependencies": [
+          "npm:lucia@3"
+        ]
+      },
+      "@cotyhamilton/lucia-adapter-denokv@1.0.0-next.0": {}
     },
     "npm": {
       "@emnapi/core@0.45.0": {
@@ -279,6 +290,8 @@
     "https://deno.land/x/hono@v3.12.9/utils/mime.ts": "17726536ae8387ca5fd27e015b3379ff632c4722dbedabc71f96159e7eb71250",
     "https://deno.land/x/hono@v3.12.9/utils/stream.ts": "fe5f539a79c476e6af39e2549fa06054ad3c7ff3cbfa2c4c752e879cdd3365d5",
     "https://deno.land/x/hono@v3.12.9/utils/url.ts": "d9d307a495e7dfc6e916fbcfa74c2d8d23e8e685bddc5e6ebc9c0f784345a01a",
+    "https://jsr.io/@cotyhamilton/lucia-adapter-denokv/0.1.0/mod.ts": "6453e33cc1104cb0daa911da0ac5e5d7870a2757f6462fb1b7365fa8d87c3f66",
+    "https://jsr.io/@cotyhamilton/lucia-adapter-denokv/1.0.0-next.0/mod.ts": "6453e33cc1104cb0daa911da0ac5e5d7870a2757f6462fb1b7365fa8d87c3f66",
     "https://raw.githubusercontent.com/cotyhamilton/lucia-auth-adapter-deno-kv/main/mod.ts": "4d53d7f15bfd9685c7289c689148f1106ffd92216e23d42da277283eb16353dd"
   },
   "workspace": {
