@@ -6,7 +6,6 @@
     "@cotyhamilton/lucia-adapter-denokv": "jsr:@cotyhamilton/lucia-adapter-denokv@^0.1.1",
     "@std/dotenv": "jsr:@std/dotenv@^0.224.0",
     "hono/": "https://deno.land/x/hono@v3.12.9/",
-    "lucia-auth-adapter-deno-kv": "https://raw.githubusercontent.com/cotyhamilton/lucia-auth-adapter-deno-kv/main/mod.ts",
     "npm:arctic": "npm:arctic@1.1.0",
     "npm:lucia": "npm:lucia@3.0.1"
   },
