@@ -1,4 +1,4 @@
-import { DenoKVAdapter } from "jsr:@cotyhamilton/lucia-adapter-denokv@0";
+import { DenoKVAdapter } from "@cotyhamilton/lucia-adapter-denokv";
 import { Lucia } from "npm:lucia@3";
 import { db } from "./db.ts";
 import { dev } from "./environment.ts";

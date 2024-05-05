@@ -1,4 +1,4 @@
-# deno github auth with lucia example
+# deno kv github auth with lucia
 
 https://lucia-auth.deno.dev/
 

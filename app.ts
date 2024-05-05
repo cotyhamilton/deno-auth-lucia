@@ -1,3 +1,4 @@
+import "@std/dotenv/load";
 import { logger } from "hono/middleware.ts";
 import { auth } from "./auth.ts";
 import { hono } from "./hono.ts";
