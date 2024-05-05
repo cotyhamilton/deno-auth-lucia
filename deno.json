@@ -8,8 +8,7 @@
     "hono/": "https://deno.land/x/hono@v3.12.9/",
     "lucia-auth-adapter-deno-kv": "https://raw.githubusercontent.com/cotyhamilton/lucia-auth-adapter-deno-kv/main/mod.ts",
     "npm:arctic": "npm:arctic@1.1.0",
-    "npm:lucia": "npm:lucia@3.0.1",
-    "std/": "https://deno.land/std@0.213.0/"
+    "npm:lucia": "npm:lucia@3.0.1"
   },
   "exclude": ["*.md"]
 }
