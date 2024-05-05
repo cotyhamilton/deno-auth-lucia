@@ -1,6 +1,6 @@
+import { generateState, OAuth2RequestError } from "arctic";
 import { getCookie, setCookie } from "hono/helper.ts";
-import { generateState, OAuth2RequestError } from "npm:arctic";
-import { DatabaseUser } from "npm:lucia";
+import { DatabaseUser } from "lucia";
 import { db } from "./db.ts";
 import { dev } from "./environment.ts";
 import { github } from "./github.ts";

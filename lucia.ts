@@ -1,5 +1,5 @@
 import { DenoKVAdapter } from "@cotyhamilton/lucia-adapter-denokv";
-import { Lucia } from "npm:lucia";
+import { Lucia } from "lucia";
 import { db } from "./db.ts";
 import { dev } from "./environment.ts";
 
@@ -18,7 +18,7 @@ export const lucia = new Lucia(new DenoKVAdapter(db), {
   },
 });
 
-declare module "npm:lucia" {
+declare module "lucia" {
   interface Register {
     Lucia: typeof lucia;
     DatabaseUserAttributes: DatabaseUserAttributes;
