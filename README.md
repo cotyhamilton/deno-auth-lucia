@@ -2,6 +2,8 @@
 
 https://lucia-auth.deno.dev/
 
+Uses [@cotyhamilton/lucia-adapter-denokv](https://jsr.io/@cotyhamilton/lucia-adapter-denokv)
+
 ![screenshot](./.attachments/screenshot.png)
 
 ```sh
