@@ -2,18 +2,16 @@
   "version": "3",
   "packages": {
     "specifiers": {
-      "jsr:@cotyhamilton/lucia-adapter-denokv@^0.1.1": "jsr:@cotyhamilton/lucia-adapter-denokv@0.1.1",
+      "jsr:@cotyhamilton/lucia-adapter-denokv@^0.2.0": "jsr:@cotyhamilton/lucia-adapter-denokv@0.2.0",
       "jsr:@std/dotenv@^0.224.0": "jsr:@std/dotenv@0.224.0",
       "npm:arctic@^1.8.0": "npm:arctic@1.8.0",
       "npm:lucia@3": "npm:lucia@3.2.0",
-      "npm:lucia@^3.2.0": "npm:lucia@3.2.0"
+      "npm:lucia@^3.2.0": "npm:lucia@3.2.0",
+      "npm:superjson@1.13.3": "npm:superjson@1.13.3"
     },
     "jsr": {
-      "@cotyhamilton/lucia-adapter-denokv@0.1.1": {
-        "integrity": "f43bf404371a66b9d60e48c8ec8a047af412c837bcecd43525e3a85760055b70",
-        "dependencies": [
-          "npm:lucia@3"
-        ]
+      "@cotyhamilton/lucia-adapter-denokv@0.2.0": {
+        "integrity": "d4d9967c09e9fb128d01e1e543c7f7899a7ea6fb5a4b6e9858670f0ce2dd7ac2"
       },
       "@std/dotenv@0.224.0": {
         "integrity": "d9234cdf551507dcda60abb6c474289843741d8c07ee8ce540c60f5c1b220a1d"
@@ -204,8 +202,18 @@
           "oslo": "oslo@1.2.0"
         }
       },
+      "copy-anything@3.0.5": {
+        "integrity": "sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==",
+        "dependencies": {
+          "is-what": "is-what@4.1.16"
+        }
+      },
       "fs-monkey@1.0.6": {
         "integrity": "sha512-b1FMfwetIKymC0eioW7mTywihSQE4oLzQn1dB6rZB5fx/3NpNEdAWeCSMB+60/AeT0TCXsxzAlcYVEFCTAksWg==",
+        "dependencies": {}
+      },
+      "is-what@4.1.16": {
+        "integrity": "sha512-ZhMwEosbFJkA0YhFnNDgTM4ZxDRsS6HqTo7qsZM08fehyRYIYa0yHu5R6mgo1n/8MgaPBXiPimPD77baVFYg+A==",
         "dependencies": {}
       },
       "lucia@3.2.0": {
@@ -233,6 +241,12 @@
           "@node-rs/bcrypt": "@node-rs/bcrypt@1.9.0"
         }
       },
+      "superjson@1.13.3": {
+        "integrity": "sha512-mJiVjfd2vokfDxsQPOwJ/PtanO87LhpYY88ubI5dUB1Ab58Txbyje3+jpm+/83R/fevaq/107NNhtYBLuoTrFg==",
+        "dependencies": {
+          "copy-anything": "copy-anything@3.0.5"
+        }
+      },
       "tslib@2.6.2": {
         "integrity": "sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==",
         "dependencies": {}
@@ -240,6 +254,8 @@
     }
   },
   "remote": {
+    "https://deno.land/std@0.203.0/dotenv/load.ts": "0636983549b98f29ab75c9a22a42d9723f0a389ece5498fe971e7bb2556a12e2",
+    "https://deno.land/std@0.203.0/dotenv/mod.ts": "1da8c6d0e7f7d8a5c2b19400b763bc11739df24acec235dda7ea2cfd3d300057",
     "https://deno.land/x/hono@v4.3.2/adapter/deno/serve-static.ts": "db226d30f08f1a8bb77653ead42a911357b2f8710d653e43c01eccebb424b295",
     "https://deno.land/x/hono@v4.3.2/adapter/deno/ssg.ts": "49d73dd0d351fc52a54bfc8094096aff957f5a955a3eb976844ed8d88903bc0f",
     "https://deno.land/x/hono@v4.3.2/adapter/deno/websocket.ts": "032bd72f32103ff948e7ad5945ccb6a32e1ccd507ad222758e72a7b3a7828fb5",
@@ -345,7 +361,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@cotyhamilton/lucia-adapter-denokv@^0.1.1",
+      "jsr:@cotyhamilton/lucia-adapter-denokv@^0.2.0",
       "jsr:@std/dotenv@^0.224.0",
       "npm:arctic@^1.8.0",
       "npm:lucia@^3.2.0"

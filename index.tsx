@@ -26,7 +26,15 @@ app.get("/", (c) => {
         {c.var.user
           ? (
             <article style="text-align: center; width: 100%; max-width: 600px;">
-              <h1>hello {c.var.user.username} 👋</h1>
+              <div class="avatar" style="border: 1px solid white; border-radius: 50%; height: 100px; overflow: hidden; width: 100px;">
+                <img src={c.var.user.avatarUrl} alt="Avatar" style="height: 100%; object-fit: cover; width: 100%;" />
+              </div>
+              <h1>hello {c.var.user.name} 👋</h1>
+              <p style="text-align: start;">
+                <strong>id -- </strong>{c.var.user.githubId}
+                <br />
+                <strong>username -- </strong>{c.var.user.username}
+              </p>
               <form action="/logout" method="post" style="margin: 0;">
                 <button class="contrast">sign out</button>
               </form>

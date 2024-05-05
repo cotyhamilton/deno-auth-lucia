@@ -9,6 +9,8 @@ export const lucia = new Lucia(new DenoKVAdapter(db), {
       // attributes has the type of DatabaseUserAttributes
       githubId: attributes.github_id,
       username: attributes.username,
+      name: attributes.name,
+      avatarUrl: attributes.avatar_url,
     };
   },
   sessionCookie: {
@@ -28,4 +30,6 @@ declare module "lucia" {
 interface DatabaseUserAttributes {
   github_id: string;
   username: string;
+  name: string;
+  avatar_url: string;
 }

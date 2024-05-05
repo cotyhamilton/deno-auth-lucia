@@ -44,6 +44,23 @@ app.get("/github/callback", async (c) => {
       (await db.get<DatabaseUser>(["github_users", githubUser.id])).value;
 
     if (existingUser) {
+      // update user in case details have changed
+      await db.atomic()
+        .set(["users", existingUser.id], {
+          id: existingUser.id,
+          github_id: githubUser.id,
+          username: githubUser.login,
+          name: githubUser.name,
+          avatar_url: githubUser.avatar_url,
+        })
+        .set(["github_users", githubUser.id], {
+          id: existingUser.id,
+          github_id: githubUser.id,
+          username: githubUser.login,
+          name: githubUser.name,
+          avatar_url: githubUser.avatar_url,
+        })
+        .commit();
       const session = await lucia.createSession(existingUser.id, {});
       const sessionCookie = lucia.createSessionCookie(session.id);
       setCookie(c, sessionCookie.name, sessionCookie.value, {
@@ -60,11 +77,15 @@ app.get("/github/callback", async (c) => {
           id: userId,
           github_id: githubUser.id,
           username: githubUser.login,
+          name: githubUser.name,
+          avatar_url: githubUser.avatar_url,
         })
         .set(["github_users", githubUser.id], {
           id: userId,
           github_id: githubUser.id,
           username: githubUser.login,
+          name: githubUser.name,
+          avatar_url: githubUser.avatar_url,
         })
         .commit();
       const session = await lucia.createSession(userId, {});
@@ -91,4 +112,6 @@ export default app;
 interface GitHubUser {
   id: string;
   login: string;
+  name: string;
+  avatar_url: string;
 }
